@@ -1,0 +1,449 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+
+}
+
+.body-login {
+    background: linear-gradient(135deg, rgba(9, 123, 229, 0.18), rgba(0, 0, 0, 0.95)),
+        linear-gradient(circle at top left, rgba(229, 9, 20, 0.18), transparent 30%),
+        #09090909 color #ffffff;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-y: auto;
+
+}
+
+.pagina-login {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: lfr lfr;
+    overflow:hidden;
+
+}
+
+.painel-animação{
+     background:transparent ;
+     display:flex;
+     align-items: center;
+     justify-content: center;
+     padding:30px;
+     min-height: 100vh;
+
+}
+
+.animação-conteudo{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     height:100%;
+}
+
+.logo-animacao {
+width:420px;
+max-width:80%;
+animation: flutuarLogo 3.5s ease-in-out infinite;
+filter:drop-shadow( 0 20px 40px rgba(0,0,0,0.45));
+}
+
+@keyframes flutuarLogo {
+0%,100%{
+      transform:translateY(0) skale(1);
+}
+50%{
+    transform:translateY(-10px) scale(1.03);
+}
+}
+
+.painel-formulario{
+ display: flex;
+ align-items: center;
+ justify-content:center ;
+ padding: 30px 20px ;
+ background:transparent;
+ height:100vh;
+ overflow-y:auto;
+ }
+
+ .login-box{
+  width:100%;
+  max-width:560px;
+  max-height:calc(100vh-80px) ;
+  background:#000000;
+  border:1px solid #1f1f1f;
+  border-radius:20px;
+  padding:22px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  overflow-y:auto ;
+ }
+
+ .topo-login{
+display:flex;
+justify-content:center;
+margin-bottom:16px ;
+ }
+
+ .logo-login{
+width:120px;
+ }
+
+ .abas-login{
+display:grid;
+grid-template-columns:1fr 1fr ;
+gap:8px;
+margin-bottom:18px ;
+background:#121212;
+padding:6px;
+border-radius:12px;
+ }
+
+ .aba-bnt{
+border:none;
+background:transparent ;
+color: #bbbbbb;
+padding:11px;
+border-radius:10px ;
+cursor:pointer;
+font-weight: bold;
+transition:0.3s;
+ }
+
+ .aba-bnt.ativo{
+background:#e50914;
+color:#ffffff;
+ }
+
+ .aba-conteudo{
+display: none;
+ }
+
+.aba-conteudo.ativo{
+display:block;
+}
+
+ .aba-conteudo.ativo h2{
+margin:0 0 16px ;
+font-size:24px;
+ }
+
+ .formulario{
+display:flex;
+flex-direction:column;
+gap:6px;
+
+ }
+
+ .grupo-campo{
+display:flex;
+flex-direction:column;
+gap:6px;
+
+ }
+
+ .grupo-campo label {
+font-size:13px;
+color:#d0d0d0;
+
+ }
+
+ .grupo-campo input:focus{
+ border-color:#e50914;
+ box-shadow: 0 0 0 3px rgba(229,9,20,0.12);
+ }
+
+ .grupo-campo input [type="text"]#data-nascimneto{
+color:#ffffff;
+padding-right:44px ;
+
+ }
+
+ .linha-2{  
+display:grid ;
+grid-template-columns:1fr 1fr ;
+gap:12px ;
+ }
+
+ .bnt-principal,
+ .bnt-secundario{
+    border: none;
+    border-radius:12px ;
+    cursor:pointer;
+    font-weight:bold ;
+    transition:0.3s ;
+    height:46px;
+    font-size:14px;
+    width:100%;
+    font-family: Arial, Helvetica, sans-serif;
+
+ }
+
+ .bnt-principal{
+background: #e50914;
+color:#ffffff
+ }
+
+ .bnt-principal:hover{
+opacity: 0.88;
+
+ }
+
+
+ .bnt-secundario{
+background: #1a1a1a;
+color:#ffffff;
+border:1px solid #2f2f2f;
+ }
+
+ .bnt-secundario:hover{
+background: #202020;
+color:#ffffff
+
+ }
+
+ .divisor{
+  position:relative;
+  text-align:center;
+  margin:14px 0;
+
+ }
+
+ .divisor::before{
+content:"";
+position:absolute;
+top:50%;
+left:0;
+width: 100%;
+height:1px ;
+background:#2c2c2c;
+ }
+
+ .divisor span{
+position:relative;
+background:#000000 ;
+padding:0 12px;
+color:#9c9c9c;
+font-size:13px;
+ }
+
+
+ .bnt-google{
+width: 100%;
+height:46px ;
+border:none;
+border-radius:12px ;
+cursor:pointer;
+display: flex;
+align-items: center;
+justify-content:center ;
+gap:12px;
+background:#ffffff ;
+color:#1f1f1f;
+font-weight:600 ;
+font-size: 14px;
+transition:0.3;
+font-family:Arial, Helvetica, sans-serif;
+
+ }
+ 
+.bnt-google:hover{
+background: #f3f3f3;
+}
+
+.bnt-google img{
+width:20px ;
+height:20px ;
+
+}
+
+.bnt-face{
+margin-top:12px;
+
+}
+
+.recuperar-box{
+display: none;
+margin-top:14px;
+background:#0f0f0f;
+border:1px solid #232323;
+border-radius:14px ;
+padding:14px;
+}
+  
+.recuperar-box.aba-bnt.ativo{  
+display: block;
+
+}
+
+.recuperar-box h3{
+margin:0 0 14px;
+font-size:18px;
+
+
+}
+
+.bnt-link-recuperar{
+width: 100%;
+margin-top: 12px;
+background: transparent;
+border: none;
+color: #ffffff;
+cursor: pointer;
+font-weight: 600;
+font-size: 14px;
+opacity: 0.85;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.bnt-link-recuperar:hover{
+text-decoration: underline;
+}
+
+
+.upload-foto{
+display: flex;
+justify-content: center;
+margin-bottom: 4px;
+
+}
+
+.upload-foto input{
+display:  none;
+}
+
+
+.foto-prewiew{
+ width: 100px;
+ height: 100px;
+ border-radius: 50%;
+
+
+ border:px dashed #444444;
+ background: #111111;
+ display: flex;
+ align-items: center;
+ justify-content:center ;
+ color: #bdbdbd;
+ cursor:pointer;
+ padding:12px;
+ overflow:hidden;
+ font-size:13px;
+
+}
+
+.foto-prewiew img{
+width:100%;
+height:100% ;
+object-fit: cover;
+border-radius:50%;}
+
+/* FLATPICKER ESTILO BRASFLIX*/
+
+.flatpicker-calendar{
+  background: #000000;
+  border:1px solid #2a2a2a;
+  border-radius:12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+}
+
+.flatpicker-months{
+background:#000000 ;
+}
+
+.flatpicker-current-month{
+color:#ffffff
+
+}
+
+.flatpicker-day.selected{
+background:#e50914;
+border-color:#e50914;
+}
+
+.flatpicker-day.today{
+border-color:#e50914
+}
+
+.flatpicker-prev-month svg,
+.flatpicker-next-month svg{
+fill:#ffffff
+
+}
+
+.flatpicker-prev-month:hover svg,
+.flatpicker-prev-month:hover svg{
+fill:#e50914
+
+}
+
+.flatpicker-time input{
+color:#ffffff
+
+}
+
+.numInputWrapper span{
+color:#ffffff
+}
+@media (max-width:1000px){
+.pagina-login{
+   grid-template-columns: 1fr;
+
+}
+
+.painel-animação{
+min-height: 220px;
+padding: 20px;
+}
+
+.painel-formulario{
+min-height: auto;
+padding:20px 16px 30px;
+}
+
+.logo-animacao{
+width: 260px;
+}
+
+}
+
+@media(max-width:640px){
+.pagina-login{
+min-height: 100vh;
+}
+
+.painel-animação{
+min-height: 160px;
+padding:18px ;
+}
+
+.painel-formulario{
+padding: 14px 12px 20px;
+}
+
+.login-box{
+padding: 18px;
+
+}
+
+
+.linha-2{
+
+
+grid-template-columns: 1fr;
+}
+
+.logo-animacao{
+
+width: 180px;
+
+}
+.aba-conteudo h2{
+font-size: 21px;
+}
+
+
+}
