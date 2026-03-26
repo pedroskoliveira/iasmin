@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics | Admin BRASFLIX</title>
+    <link rel="icon" href="../imagens/logo.png">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../css/topbar.css">
+</head>
+
+<body class="body-admin">
+
+    <header class="admin-header">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../imagens/logo.png" alt="BRASFLIX">
+            </a>
+        </div>
+
+        <nav class="admin-nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="videos.html">Vídeos</a>
+            <a href="categorias.html">Categorias</a>
+            <a href="comentarios.html">Comentários</a>
+            <a href="analytics.html" class="ativo">Analytics</a>
+        </nav>
+
+        <button class="login">Sair</button>
+    </header>
+
+    <main class="pagina-admin">
+
+        <section class="admin-topo">
+            <div class="admin-topo-info">
+                <span class="admin-tag">Analytics</span>
+                <h1>Dados da plataforma</h1>
+                <p>
+                    Visualize métricas, tendências e padrões de atividade da BRASFLIX.
+                    Depois conectaremos tudo ao Firebase para exibir dados reais.
+                </p>
+            </div>
+        </section>
+
+        <section class="admin-dashboard-cards">
+            <div class="dashboard-card">
+                <h3>Usuários</h3>
+                <p id="totalUsuarios">0</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Vídeos</h3>
+                <p id="totalVideos">0</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Comentários</h3>
+                <p id="totalComentarios">0</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Visualizações</h3>
+                <p id="totalViews">0</p>
+            </div>
+        </section>
+
+        <section class="admin-bloco">
+            <h2>Visualizações na semana</h2>
+            <div class="grafico-container">
+                <canvas id="graficoViews"></canvas>
+            </div>
+        </section>
+
+        <section class="admin-bloco">
+            <h2>Categorias mais assistidas</h2>
+            <div class="grafico-container">
+                <canvas id="graficoCategorias"></canvas>
+            </div>
+        </section>
+
+        <section class="admin-bloco">
+            <div class="analytics-heatmap-topo">
+                <div>
+                    <h2>Mapa de atividade dos usuários</h2>
+                    <p class="heatmap-descricao">
+                        Este painel mostrará a intensidade de uso da plataforma por dia,
+                        com base em acessos, visualizações e interações.
+                    </p>
+                </div>
+
+                <div class="heatmap-legenda">
+                    <span>Menor</span>
+                    <div class="heatmap-legenda-cores">
+                        <span class="legenda-box nivel-0"></span>
+                        <span class="legenda-box nivel-1"></span>
+                        <span class="legenda-box nivel-2"></span>
+                        <span class="legenda-box nivel-3"></span>
+                        <span class="legenda-box nivel-4"></span>
+                    </div>
+                    <span>Maior</span>
+                </div>
+            </div>
+
+            <div class="heatmap-wrapper">
+                <div class="heatmap-meses">
+                    <span>Jan</span>
+                    <span>Fev</span>
+                    <span>Mar</span>
+                    <span>Abr</span>
+                    <span>Mai</span>
+                    <span>Jun</span>
+                    <span>Jul</span>
+                    <span>Ago</span>
+                    <span>Set</span>
+                    <span>Out</span>
+                    <span>Nov</span>
+                    <span>Dez</span>
+                </div>
+
+                <div class="heatmap-grid-box">
+                    <div class="heatmap-dias">
+                        <span>Seg</span>
+                        <span>Qua</span>
+                        <span>Sex</span>
+                        <span>Dom</span>
+                    </div>
+
+                    <div class="heatmap-grid" id="heatmapGrid"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="admin-bloco">
+            <h2>Vídeos em alta</h2>
+
+            <div class="admin-lista-videos" id="videosAlta"></div>
+
+            <div class="estado-vazio-admin" id="estadoVazioVideosAlta">
+                <div class="estado-vazio-admin-icone">📈</div>
+                <h3>Sem dados ainda</h3>
+                <p>
+                    Os vídeos em alta aparecerão aqui quando os dados reais forem conectados.
+                </p>
+            </div>
+        </section>
+
+    </main>
+<script type="module" src="../js/admin-analytics.js"></script>
+<script type="module" src="../js/admin-auth.js"></script>
+
+    <script type="module" src="../js/topbar.js"></script>
+</body>
+</html>
