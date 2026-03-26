@@ -1,0 +1,158 @@
+body {
+  background: #080808;
+  color: #fff;
+}
+
+.users-page {
+  padding: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.users-hero {
+  padding: 28px;
+  border: 1px solid #1e1e1e;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #111, #0a0a0a);
+  margin-bottom: 24px;
+}
+
+.users-kicker {
+  color: #e50914;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.users-hero h1 {
+  margin: 10px 0 8px;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+}
+
+.users-hero p {
+  color: #d4d4d4;
+  max-width: 760px;
+}
+
+.users-search-wrap {
+  margin-top: 16px;
+}
+
+.users-search-wrap input {
+  width: min(100%, 460px);
+  padding: 14px 16px;
+  border-radius: 999px;
+  border: 1px solid #351414;
+  background: #000;
+  color: #fff;
+}
+
+.users-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.user-card {
+  background: #111;
+  border: 1px solid #1f1f1f;
+  border-radius: 20px;
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.user-card-top {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.user-card-avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #1f1f1f;
+}
+
+.user-card-name {
+  font-weight: 700;
+}
+
+.user-card-username {
+  font-size: 0.9rem;
+  color: #d57a7a;
+}
+
+.user-card-bio {
+  color: #d9d9d9;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  min-height: 40px;
+}
+
+.user-card-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.user-card-tag {
+  padding: 6px 10px;
+  background: #180b0b;
+  border: 1px solid #381515;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+.user-card-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.user-card-actions button,
+.user-card-actions a {
+  flex: 1;
+  min-width: 110px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #e50914;
+  background: transparent;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.user-card-actions .primary {
+  background: #e50914;
+}
+
+.users-empty {
+  display: none;
+  padding: 18px;
+  border-radius: 18px;
+  background: #111;
+  border: 1px dashed #333;
+  color: #ccc;
+}
+
+@media (max-width: 640px) {
+  .users-page {
+    padding: 16px;
+  }
+
+  .users-hero {
+    padding: 20px;
+  }
+}
