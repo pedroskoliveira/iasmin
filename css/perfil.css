@@ -1,0 +1,262 @@
+body {
+  background: #080808;
+  color: #fff;
+}
+
+.perfil-page {
+  padding: 24px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.perfil-hero-card,
+.perfil-panel,
+.perfil-stat-card {
+  background: #111;
+  border: 1px solid #1f1f1f;
+  border-radius: 22px;
+}
+
+.perfil-hero-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 22px;
+  align-items: center;
+}
+
+.perfil-hero-left {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.perfil-avatar {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #1a1a1a;
+}
+
+.perfil-badge {
+  display: inline-block;
+  padding: 6px 10px;
+  background: #180b0b;
+  border: 1px solid #341414;
+  border-radius: 999px;
+  color: #e5b0b0;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.perfil-username,
+.perfil-email,
+.perfil-bio {
+  color: #d4d4d4;
+}
+
+.perfil-bio {
+  max-width: 760px;
+  line-height: 1.5;
+}
+
+.perfil-hero-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.perfil-pill-btn {
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid #e50914;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.perfil-pill-btn.primary {
+  background: #e50914;
+}
+
+.perfil-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.perfil-stat-card {
+  padding: 16px 18px;
+  display: grid;
+  gap: 6px;
+}
+
+.perfil-stat-card span {
+  color: #cfcfcf;
+}
+
+.perfil-stat-card strong {
+  font-size: 1.8rem;
+}
+
+.perfil-layout-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(320px, 0.9fr);
+  gap: 18px;
+}
+
+.perfil-panel {
+  padding: 18px;
+}
+
+.perfil-panel + .perfil-panel {
+  margin-top: 18px;
+}
+
+.perfil-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.perfil-panel-header a {
+  color: #ff8d8d;
+  text-decoration: none;
+}
+
+.social-list {
+  display: grid;
+  gap: 12px;
+}
+
+.social-person {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 16px;
+  background: #0b0b0b;
+  border: 1px solid #1b1b1b;
+}
+
+.social-person img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #1f1f1f;
+}
+
+.social-person-name {
+  font-weight: 700;
+}
+
+.social-person-meta {
+  font-size: 0.88rem;
+  color: #c9c9c9;
+}
+
+.social-person-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.social-person-actions button,
+.social-person-actions a {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #e50914;
+  background: transparent;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.social-person-actions .primary {
+  background: #e50914;
+}
+
+.chips-wrap {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chips-wrap .chip {
+  padding: 8px 12px;
+  background: #180b0b;
+  border: 1px solid #331414;
+  border-radius: 999px;
+}
+
+.social-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.social-video-card {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #0c0c0c;
+  border: 1px solid #1e1e1e;
+}
+
+.social-video-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.social-video-card-content {
+  padding: 12px;
+}
+
+.social-empty {
+  padding: 12px;
+  border: 1px dashed #333;
+  border-radius: 14px;
+  color: #ccc;
+  background: #0d0d0d;
+}
+
+@media (max-width: 980px) {
+  .perfil-layout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .perfil-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .perfil-page {
+    padding: 16px;
+  }
+
+  .perfil-hero-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .perfil-hero-left {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .perfil-stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
