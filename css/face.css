@@ -1,0 +1,252 @@
+:root {
+  --face-bg: #070707;
+  --face-panel: rgba(14, 14, 14, 0.96);
+  --face-border: #232323;
+  --face-soft: #bdbdbd;
+  --face-red: #e50914;
+  --face-red-dark: #b20710;
+  --face-green: #25b15f;
+  --face-blue: #2d8cff;
+  --face-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body.body-face {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  background:
+    radial-gradient(circle at top left, rgba(229, 9, 20, 0.18), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(229, 9, 20, 0.14), transparent 30%),
+    linear-gradient(135deg, rgba(229, 9, 20, 0.08), rgba(0, 0, 0, 0.95)),
+    var(--face-bg);
+}
+
+.pagina-face {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 18px;
+}
+
+.face-container {
+  width: min(100%, 560px);
+  background: var(--face-panel);
+  border: 1px solid var(--face-border);
+  border-radius: 28px;
+  box-shadow: var(--face-shadow);
+  padding: 28px 24px 24px;
+  text-align: center;
+}
+
+.logo-face {
+  width: 104px;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto 14px;
+}
+
+.face-container h1 {
+  margin: 0 0 10px;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  line-height: 1.2;
+}
+
+.face-texto {
+  margin: 0 auto 20px;
+  max-width: 420px;
+  color: var(--face-soft);
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+
+.camera-box {
+  position: relative;
+  width: min(100%, 420px);
+  aspect-ratio: 4 / 3;
+  margin: 0 auto 18px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #2f2f2f;
+  background: #050505;
+}
+
+.camera-box video,
+.camera-box canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.camera-box canvas {
+  z-index: 2;
+  pointer-events: none;
+}
+
+.moldura-rosto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(48%, 200px);
+  height: min(70%, 250px);
+  transform: translate(-50%, -50%);
+  border: 3px solid rgba(229, 9, 20, 0.92);
+  border-radius: 50% / 46%;
+  z-index: 3;
+  box-shadow: 0 0 0 999px rgba(0, 0, 0, 0.12);
+  pointer-events: none;
+}
+
+.status-face {
+  margin: 0 auto 18px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #101010;
+  border: 1px solid #262626;
+  color: #ededed;
+  line-height: 1.55;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.botoes-face {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 auto 16px;
+}
+
+.btn-face {
+  min-width: 180px;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 18px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn-face:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-primary {
+  background: var(--face-red);
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--face-red-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(229, 9, 20, 0.28);
+}
+
+.btn-success {
+  background: var(--face-green);
+  color: #fff;
+}
+
+.btn-success:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(37, 177, 95, 0.25);
+}
+
+.btn-info {
+  background: var(--face-blue);
+  color: #fff;
+}
+
+.btn-info:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(45, 140, 255, 0.25);
+}
+
+.term-face {
+  max-width: 440px;
+  margin: 0 auto 16px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #101010;
+  border: 1px solid #262626;
+  text-align: left;
+}
+
+.term-face label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #d8d8d8;
+  line-height: 1.5;
+  font-size: 0.94rem;
+}
+
+.term-face input[type="checkbox"] {
+  margin-top: 2px;
+  accent-color: var(--face-red);
+}
+
+.voltar-login {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 4px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.voltar-login:hover {
+  color: #ffb7ba;
+}
+
+@media (max-width: 640px) {
+  .pagina-face {
+    padding: 18px 12px;
+  }
+
+  .face-container {
+    padding: 22px 16px 18px;
+    border-radius: 22px;
+  }
+
+  .botoes-face {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-face {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .camera-box {
+    width: 100%;
+  }
+}
